@@ -1,0 +1,6 @@
+header {
+    @apply flex justify-between items-center w-full h-[70px] bg-white;
+    & > a {
+        @apply uppercase mr-11 font-medium hover:text-alert;
+    }
+}

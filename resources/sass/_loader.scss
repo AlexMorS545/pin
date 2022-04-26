@@ -1,0 +1,12 @@
+.loader-wrap {
+    @apply fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-addition-color z-30;
+    .loader {
+        @apply w-[706px] h-[385px] flex flex-col items-center justify-center;
+        img {
+            @apply w-[550px];
+        }
+        h2 {
+            @apply text-[40px] mt-8 italic mr-10;
+        }
+    }
+}

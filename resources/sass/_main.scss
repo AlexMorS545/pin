@@ -1,0 +1,47 @@
+body {
+    @apply font-['Roboto'] text-[11px] leading-[11px];
+}
+.wrapper {
+    @apply flex flex-row flex-wrap min-w-full;
+}
+.page-content {
+    width: calc(100% - 200px);
+    @apply flex flex-col bg-addition-color;
+}
+h2 {
+    @apply text-[20px];
+}
+
+#index-table {
+    @apply w-3/4;
+
+    .header {
+        @apply grid grid-cols-4 w-full;
+        p {
+            @apply block py-[9px] text-left first:pl-[18px];
+        }
+    }
+
+    .body {
+        @apply grid grid-rows-1 w-full;
+        div {
+            @apply cursor-pointer hover:bg-addition-color grid grid-cols-4 items-center bg-white border-t border-t-addition-dark-color last:border-b last:border-b-addition-dark-color;
+        }
+        p {
+            @apply py-[22px] text-left first:pl-[18px] last:flex last:flex-col;
+            span {
+                @apply flex mb-1;
+            }
+        }
+    }
+}
+.btn {
+    @apply py-2.5 bg-accent text-white flex items-center justify-center rounded-[5px] w-[140px];
+}
+
+#create-btn {
+    @apply absolute top-[90px] right-5;
+}
+.alert {
+    @apply text-alert mb-2;
+}

@@ -1,0 +1,58 @@
+.field-wrap {
+    @apply flex flex-col w-full relative;
+}
+
+label {
+    @apply text-white mb-2;
+}
+
+input {
+    @apply p-2.5 rounded-[5px] mb-3 border-none outline-none focus:outline-none focus:border-none;
+}
+
+.select-wrap {
+    @apply relative w-full;
+
+    input[data-type="select"] {
+
+        @apply cursor-pointer w-full;
+        &.active {
+
+            @apply rounded-br-none rounded-bl-none;
+            & + .dropdown {
+                transition: all .2s;
+                width: calc(100% + 2px);
+                @apply z-30 block bg-white rounded-br-[5px] rounded-bl-[5px] absolute top-[30px] -left-px rounded-bl-[5px] rounded-br-[5px] border-b border-b-main border-l border-l-main border-r border-r-main;
+
+                & > div {
+                    @apply p-2.5 hover:bg-accent cursor-pointer;
+                }
+            }
+        }
+
+        & + .dropdown {
+            @apply hidden;
+        }
+
+    }
+    &.active {
+        &:after {
+            top: 11px;
+            transform: rotate(-135deg);
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 9px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #C4C4C4;
+        border-left: 2px white;
+        border-top: 2px white;
+        transform: rotate(45deg);
+        transition: all .2s;
+    }
+}

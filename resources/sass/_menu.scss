@@ -1,0 +1,13 @@
+.menu {
+    @apply flex flex-row items-center ml-[17px];
+    &__list {
+        @apply list-none transition-all relative leading-[70px] hover:after:content-[''] hover:after:block hover:after:absolute hover:after:h-[3px] hover:after:w-full hover:after:bg-alert hover:after:-bottom-0;
+
+        &.active {
+            @apply  after:content-[''] after:block after:absolute after:h-[3px] after:w-full after:bg-alert after:-bottom-0;
+        }
+    }
+    &__link {
+        @apply text-alert uppercase decoration-0 block h-[70px];
+    }
+}

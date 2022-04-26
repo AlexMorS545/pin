@@ -1,0 +1,59 @@
+.modal-overlay {
+    @apply invisible fixed bg-white/80 left-0 top-0 bottom-0 right-0 w-full flex items-center justify-center;
+
+    .modal-wrap {
+        @apply bg-main w-[630px] py-6 px-3 relative;
+
+        .btn-wrap {
+            @apply absolute right-3 top-3 flex flex-row items-center;
+            button {
+                @apply cursor-pointer ml-3;
+            }
+            .icons {
+                @apply bg-black flex items-center justify-center w-5 h-5 first:mr-[2px] cursor-pointer;
+            }
+        }
+
+        h2 {
+            @apply mb-[30px] text-white font-bold;
+        }
+        .text-wrap {
+            @apply flex flex-col;
+
+            p {
+                @apply flex flex-row text-white/70 mb-[18px] last:mb-0;
+
+                span {
+                    @apply text-white inline-block ml-[37px];
+                }
+
+                &.attribute {
+
+                    div {
+                        @apply flex flex-col ml-[37px];
+                    }
+                    span {
+                        @apply ml-0;
+                    }
+                }
+            }
+        }
+        h4 {
+            @apply text-sm leading-[11px] text-white font-bold mb-6;
+        }
+
+        .additional-field {
+            @apply text-accent mb-8 before:content-['+'] before:mr-1;
+        }
+
+        .additional-fields-wrap {
+            @apply flex flex-col;
+            .wrap {
+                @apply grid grid-cols-2 gap-3 items-center relative;
+                img {
+                    @apply absolute -right-6 w-3 mt-1 cursor-pointer;
+                }
+            }
+        }
+    }
+}

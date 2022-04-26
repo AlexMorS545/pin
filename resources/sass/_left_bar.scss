@@ -1,0 +1,17 @@
+#left-bar {
+    @apply bg-main items-start justify-start w-[200px] min-h-screen;
+
+    .logo-wrap {
+        @apply bg-white rounded-br-[20px] w-[79px] h-[59px] inline-flex items-center justify-center;
+
+        img {
+            @apply w-[50px] h-[23px];
+        }
+    }
+    p {
+        @apply w-[50px] text-white ml-[10px] mt-[7px] inline-block;
+    }
+    h3 {
+        @apply w-full text-white text-xs leading-[11px] ml-[32px] mt-[13px];
+    }
+}
